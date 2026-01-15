@@ -1,7 +1,7 @@
 //This script is written to control the handbrake, and to then send the input to the PC
 
 //Define our Handbrake Pin
-#define HPIN A7
+#define HPIN A0
 
 // Initialize PC input objects
 #include <Joystick.h>
