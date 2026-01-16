@@ -23,8 +23,8 @@ void loop() {
   int hval2 = analogRead(HPIN);
   Serial.print("Potentiometer: ");
   Serial.println(hval2);
-  int hmax = 494;
-  int hmin = 81;
+  int hmax = 970;
+  int hmin = 0;
   int hval3 = abs(hval2-hmax);
   double hval4 = (double(hval3)/(hmax-hmin));
   int hval5 = int(hval4*255);
