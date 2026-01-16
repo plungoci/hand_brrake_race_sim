@@ -11,6 +11,7 @@ Joystick_ Joystick(0x03,JOYSTICK_TYPE_JOYSTICK,1,0);
 
 void setup() {
   pinMode(HPIN, INPUT);
+  Serial.begin(9600);
 
   //Initialize Joystick Library
   Joystick.begin(false);
@@ -20,6 +21,8 @@ void setup() {
 void loop() {
   // HANDBRAKE
   int hval2 = analogRead(HPIN);
+  Serial.print("Potentiometer: ");
+  Serial.println(hval2);
   int hmax = 494;
   int hmin = 81;
   int hval3 = abs(hval2-hmax);
